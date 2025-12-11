@@ -59,3 +59,23 @@ Enviado desde la página web del Consultorio Jurídico UPEA.`;
     // Limpiar formulario
     document.getElementById('form-cita').reset();
 });
+
+// ========================
+// VISUALIZADOR DE IMÁGENES
+// ========================
+
+const modal = document.getElementById("visorModal");
+const modalImg = document.getElementById("imgModal");
+const cerrar = document.querySelector(".cerrar-modal");
+
+document.querySelectorAll(".galeria-item").forEach(img => {
+    img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    });
+});
+
+cerrar.onclick = () => {
+    modal.style.display = "none";
+};
+
