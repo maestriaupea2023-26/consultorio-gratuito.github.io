@@ -610,3 +610,68 @@ footer {
         margin-bottom: 15px;
     }
 }
+
+/* ========= GALERÍA MODERNA ========= */
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria-item {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.galeria-item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ========= VIDEOS ========= */
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.videos-grid video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ========= MODAL VISOR ========= */
+
+.visor-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+.visor-contenido {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
